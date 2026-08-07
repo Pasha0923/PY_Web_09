@@ -16,6 +16,8 @@ __pycache__/
 # Data
 data/*.json
 
+.env
+
 # OS
 .DS_Store
 Thumbs.db

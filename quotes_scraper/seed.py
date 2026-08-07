@@ -1,6 +1,6 @@
 import json
 
-from connect import *
+from connect import connect_to_mongoDB
 from models import Author , Quote
 
 connect_to_mongoDB()
