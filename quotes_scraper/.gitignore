@@ -19,3 +19,7 @@ data/*.json
 # OS
 .DS_Store
 Thumbs.db
+
+quotes_scraper/test.json
+quotes_scraper/result.json
+
