@@ -20,13 +20,13 @@ class QuotesSpider(scrapy.Spider):
             item["author"] = quote.css("small.author::text").get()
             item["tags"] = quote.css("a.tag::text").getall()
 
-        yield item
+            yield item
         # Отримуємо URL автора та перевіряємо, чи ми вже відвідали його сторінку
-        author_url = quote.css("small.author ~ a::attr(href)").get()
+            author_url = quote.css("small.author ~ a::attr(href)").get()
         # Якщо ми ще не відвідали сторінку автора, додаємо її до списку відвіданих та викликаємо метод parse_author
-        if author_url not in self.visited_authors:
-            self.visited_authors.add(author_url)
-            yield response.follow(author_url, callback=self.parse_author)
+            if author_url not in self.visited_authors:
+                self.visited_authors.add(author_url)
+                yield response.follow(author_url, callback=self.parse_author)
 
         next_page = response.css("li.next a::attr(href)").get()
         if next_page:

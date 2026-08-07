@@ -20,6 +20,6 @@ data/*.json
 .DS_Store
 Thumbs.db
 
-quotes_scraper/test.json
-quotes_scraper/result.json
 
+**/test.json
+**/result.json
