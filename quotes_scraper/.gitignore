@@ -1,0 +1,21 @@
+# Virtual environment
+.venv/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# IDE
+.vscode/
+.idea/
+
+# Scrapy cache
+.scrapy/
+
+# Data
+data/*.json
+
+# OS
+.DS_Store
+Thumbs.db
